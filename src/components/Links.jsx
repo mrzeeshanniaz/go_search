@@ -17,7 +17,7 @@ const linkStyle = "m-2 mb-0";
 
 const Links = () => {
   return (
-    <div className='flex justify-around sm:justify-between text-primary items-center mt-4'>
+    <div className='flex w-full sm:w-2/6 mx-auto justify-around sm:justify-between text-primary items-center mt-4'>
     {links.map(({ url,icon, text})=>(
         <NavLink 
         to={url} 

@@ -8,7 +8,7 @@ import Links from './Links';
 const Search = () => {
   const [text,setText] = useState("");
   const {setSearchTerm} = useResultsContext();
-  const [debounceValue] = useDebounce(text, 500);
+  const [debounceValue] = useDebounce(text, 300);
   
 
   useEffect(() =>{
@@ -16,8 +16,9 @@ const Search = () => {
   },[debounceValue])
 
   return (
-    <div className="w-4/5 sm:w-2/4 mt-2">
-      <input 
+    <div className='w-full'>
+    <div className="w-4/5 sm:w-2/4 mt-2 mx-auto">
+    <input 
       type="text"
       autoComplete="off"
       value={text}
@@ -25,7 +26,8 @@ const Search = () => {
       onChange={ e => setText(e.target.value)}
       className="w-full shadow-md border-2 border-primary  rounded-full shadow-sm  outline-none p-2 sm:p-4 text-black hover:shadow-lg"
        />
-       <div>
+    </div>
+      <div>
         <Links/>
        </div>
       </div>
